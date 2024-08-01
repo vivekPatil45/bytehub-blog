@@ -7,6 +7,7 @@ import {
     signInSuccess,
     signInStart
 } from '../redux/user/userSlice';
+import OAuth from '../components/OAuth';
 
 const SignIn = () => {
     const [formData, setFormData] = useState({});
@@ -71,29 +72,30 @@ const SignIn = () => {
                                 onChange={handleChange}
                             />
                         </div>
-                    <div>
-                        <Label value="Your password" />
-                        <TextInput
-                            type="password"
-                            placeholder="**********"
-                            id="password"
-                            onChange={handleChange}
-                        />
-                    </div>
-                    <Button
-                        gradientDuoTone="purpleToPink"
-                        type="submit"
-                        disabled={loading}
-                    >
-                        {loading ? (
-                        <>
-                            <Spinner size="sm" />
-                            <span className="pl-3">Loading...</span>
-                        </>
-                        ) : (
-                        "Sign In"
-                        )}
-                    </Button>
+                        <div>
+                            <Label value="Your password" />
+                            <TextInput
+                                type="password"
+                                placeholder="**********"
+                                id="password"
+                                onChange={handleChange}
+                            />
+                        </div>
+                        <Button
+                            gradientDuoTone="purpleToPink"
+                            type="submit"
+                            disabled={loading}
+                        >
+                            {loading ? (
+                            <>
+                                <Spinner size="sm" />
+                                <span className="pl-3">Loading...</span>
+                            </>
+                            ) : (
+                            "Sign In"
+                            )}
+                        </Button>
+                        <OAuth />
                     </form>
                     <div className="flex gap-2 text-sm mt-5">
                     <span>Dont Have an account?</span>

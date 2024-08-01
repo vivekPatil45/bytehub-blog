@@ -15,6 +15,13 @@ const userSchema = new mongoose.Schema({
         type: String,
         required:true,
     },
+    profilePicture: {
+        type: String,
+        default: function () {
+            const encodedName = encodeURIComponent(this.username);
+            return `https://ui-avatars.com/api/?name=${encodedName}`;
+        },
+    },
     }, {timestamps: true}
 );
 
