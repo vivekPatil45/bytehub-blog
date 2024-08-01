@@ -1,11 +1,21 @@
 
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 
 function App() {
 
-  return (
-    <h1 className=' bg-red-500'>Gii</h1>
-  )
+    return (
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/sign-in" element={<SignIn />} />
+          <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/projects" element={<Projects />} />
+        </Routes>
+      </BrowserRouter>
+    )
 }
 
 export default App
