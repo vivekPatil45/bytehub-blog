@@ -2,7 +2,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import {About, Home,Dashboard,SignIn,SignUp,Project } from './pages'
-import { Header } from './components'
+import { FooterComp, Header } from './components'
 
 function App() {
 
@@ -17,6 +17,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/projects" element={<Project />} />
         </Routes>
+        <FooterComp/>
       </BrowserRouter>
     )
 }
