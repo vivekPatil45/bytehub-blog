@@ -2,7 +2,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import {About, Home,Dashboard,SignIn,SignUp,Project } from './pages'
-import { FooterComp, Header } from './components'
+import { FooterComp, Header, PrivateRoute } from './components'
 
 function App() {
 
@@ -14,7 +14,9 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/sign-up" element={<SignUp />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route element={<PrivateRoute />}>
+            <Route path='/dashboard' element={<Dashboard />} />
+          </Route>
           <Route path="/projects" element={<Project />} />
         </Routes>
         <FooterComp/>
