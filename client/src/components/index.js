@@ -3,12 +3,15 @@ import FooterComp from "./Footer";
 import OAuth from "./OAuth";
 import ThemeProvider from "./ThemeProvider";
 import PrivateRoute from "./PrivateRoute";
-
+import DashProfile from "./DashProfile";
+import DashSidebar from "./DashSidebar";
 
 export{
     Header,
     FooterComp,
     OAuth,
     ThemeProvider,
-    PrivateRoute
+    PrivateRoute,
+    DashProfile,
+    DashSidebar
 };
