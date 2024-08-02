@@ -85,3 +85,6 @@ const FooterComp = () => {
 };
 
 export default FooterComp;
+
+
+418
