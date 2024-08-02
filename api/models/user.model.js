@@ -22,6 +22,10 @@ const userSchema = new mongoose.Schema({
             return `https://ui-avatars.com/api/?name=${encodedName}`;
         },
     },
+    isAdmin: {
+        type: Boolean,
+        default: false,
+    },
     }, {timestamps: true}
 );
 
