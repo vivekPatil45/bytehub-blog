@@ -1,8 +1,8 @@
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
-import {About, Home,Dashboard,SignIn,SignUp,Project } from './pages'
-import { FooterComp, Header, PrivateRoute } from './components'
+import {About, Home,Dashboard,SignIn,SignUp,Project, CreatePost } from './pages'
+import { FooterComp, Header, OnlyAdminPrivateRoute, PrivateRoute } from './components'
 
 function App() {
 
@@ -16,6 +16,9 @@ function App() {
           <Route path="/sign-up" element={<SignUp />} />
           <Route element={<PrivateRoute />}>
             <Route path='/dashboard' element={<Dashboard />} />
+          </Route>
+          <Route element={<OnlyAdminPrivateRoute />}>
+            <Route path='/create-post' element={<CreatePost />} />
           </Route>
           <Route path="/projects" element={<Project />} />
         </Routes>
