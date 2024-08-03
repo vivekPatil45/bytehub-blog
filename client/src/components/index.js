@@ -9,6 +9,8 @@ import OnlyAdminPrivateRoute from "./OnlyAdminPrivateRoute";
 import DashPosts from "./DashPosts";
 import DashUsers from "./DashUsers";
 import CallToAction from "./CallToAction";
+import ScrollToTop from "./ScrollToTop";
+import CommentSection from "./CommentSection";
 
 export{
     Header,
@@ -21,5 +23,7 @@ export{
     OnlyAdminPrivateRoute,
     DashPosts,
     DashUsers,
-    CallToAction
+    CallToAction,
+    ScrollToTop,
+    CommentSection
 };
