@@ -1,7 +1,7 @@
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
-import {About, Home,Dashboard,SignIn,SignUp,Project, CreatePost, UpdatePost } from './pages'
+import {About, Home,Dashboard,SignIn,SignUp,Project, CreatePost, UpdatePost, PostPage } from './pages'
 import { FooterComp, Header, OnlyAdminPrivateRoute, PrivateRoute } from './components'
 
 function App() {
@@ -22,6 +22,7 @@ function App() {
             <Route path='/update-post/:postId' element={<UpdatePost />} />
           </Route>
           <Route path="/projects" element={<Project />} />
+          <Route path='/post/:postSlug' element={<PostPage />} />
         </Routes>
         <FooterComp/>
       </BrowserRouter>
