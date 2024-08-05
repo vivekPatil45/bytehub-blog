@@ -12,6 +12,7 @@ import CallToAction from "./CallToAction";
 import ScrollToTop from "./ScrollToTop";
 import CommentSection from "./CommentSection";
 import Comment from "./Comment";
+import PostCard from "./PostCard";
 
 export{
     Header,
@@ -26,5 +27,7 @@ export{
     DashUsers,
     CallToAction,
     ScrollToTop,
-    CommentSection
+    CommentSection,
+    Comment,
+    PostCard
 };
