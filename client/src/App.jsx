@@ -1,7 +1,7 @@
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
-import {About, Home,Dashboard,SignIn,SignUp,Project, CreatePost, UpdatePost, PostPage } from './pages'
+import {About, Home,Dashboard,SignIn,SignUp,Project, CreatePost, UpdatePost, PostPage, Search } from './pages'
 import { FooterComp, Header, OnlyAdminPrivateRoute, PrivateRoute, ScrollToTop } from './components'
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/sign-up" element={<SignUp />} />
+          <Route path='/search' element={<Search />} />
           <Route element={<PrivateRoute />}>
             <Route path='/dashboard' element={<Dashboard />} />
           </Route>
