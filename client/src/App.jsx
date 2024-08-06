@@ -12,6 +12,8 @@ function App() {
         <Header/>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="*" element={<Home />} />
+
           <Route path="/about" element={<About />} />
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/sign-up" element={<SignUp />} />
@@ -23,7 +25,7 @@ function App() {
             <Route path='/create-post' element={<CreatePost />} />
             <Route path='/update-post/:postId' element={<UpdatePost />} />
           </Route>
-          <Route path="/projects" element={<Project />} />
+          {/* <Route path="/projects" element={<Project />} /> */}
           <Route path='/post/:postSlug' element={<PostPage />} />
         </Routes>
         <FooterComp/>
